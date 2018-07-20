@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<div class = "wrapper container">
+    <div class = "aside-left aside">
+        <h1 class="color-purple lead-title" >Price Drop Alerts</h1>
+        <p class="lead">We scan online store websites to alert you of price drops in items that interest you.</p>
+        <hr class="my-4">
+        <p>Just sign up, and get started by adding the URL of an item that you wish to track. We'll do the rest!</p>
+        <a id="btn-lead-register" class="btn btn-outline-purple" href="{{url_for('users.register_user')}}" role="button">Sign Up</a>
+    </div>
+    <div class = "aside-right aside">
+        <img class="lead-logo img-fluid" src="../static/img/bootstrap-stack.png"/>
+    </div>
+</div>
+{% endblock %}
