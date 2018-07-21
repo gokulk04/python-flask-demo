@@ -53,11 +53,12 @@ class User(object):
     def get_alerts(self):
         return Alert.find_by_user_email(self.email)
 
-    def send_email(self):
+    @staticmethod
+    def send_email(email):
         return requests.post(
             UserConstants.URL,
             auth=("api", UserConstants.API_KEY),
             data={"from": UserConstants.FROM,
-                  "to": self.email,
+                  "to": email,
                   "subject": "Price limit reached",
                   "text": "We've found a deal!"})
