@@ -4,3 +4,4 @@ beautifulsoup4==4.4.1
 passlib==1.6.5
 requests==2.18.4
 uwsgi
+APScheduler==3.0.0
